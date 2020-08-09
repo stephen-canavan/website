@@ -1,1 +1,1 @@
-# Personal Website for Stephen Canavan
+# Stephen Canavan - Software Developer

@@ -1,1 +1,1 @@
-# Stephen Canavan - Software Developer
+# Software Developer

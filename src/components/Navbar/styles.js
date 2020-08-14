@@ -9,6 +9,12 @@ const DarkNavBar = styled(Navbar)`
     color: #bbc7c4;
     font-weight: 500;
     font-size: 18px;
+    width: 100%;
+`;
+
+const Container = styled.div`
+    width: 100%;
+    white-space: nowrap;
 `;
 
 const PageLink = styled(NavItem)`
@@ -18,4 +24,4 @@ const PageLink = styled(NavItem)`
     font-size: 18px;
 `;
 
-export {DarkNavBar, PageLink};
+export {DarkNavBar, PageLink, Container};

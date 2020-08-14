@@ -9,7 +9,7 @@ const breakpoints = {
     white: '#FFFFFF',
     yellow: ['#e3bc46'],
     green: ['#779985', '#94d6ae'],
-    greyGreen: ['#496660', '#667a76', '#889e99', '#bbc7c4'],
+    greyGreen: ['#496660', '#667a76', '#889e99', '#bbc7c4', '#e6f0ed'],
     grey: ['#343a40'],
   };
   
@@ -18,6 +18,13 @@ const breakpoints = {
     medium: `1010px`,
     large: `1530px`,
   };
+
+  const fonts = {
+    //main: `'GT Walsheim Pro', sans-serif`,
+    //name: 'GT Walsheim Pro',
+    main: `'Futura', sans-serif`,
+    name: 'Futura',
+  };
   
-  export default { breakpoints, colors, containers };
+  export default { breakpoints, colors, containers, fonts };
   

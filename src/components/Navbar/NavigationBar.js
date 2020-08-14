@@ -2,7 +2,7 @@ import React from "react"
 import { Navbar, Nav } from 'react-bootstrap'
 import { graphql, StaticQuery, Link } from 'gatsby';
 import  Img  from 'gatsby-image';
-import { DarkNavBar, PageLink } from './styles';
+import { DarkNavBar, PageLink, Container } from './styles';
 
 const query = graphql`
   {
@@ -42,7 +42,8 @@ const query = graphql`
 
 const NavigationBar = () => {
   return (
-      <DarkNavBar variant="dark" bg="dark">
+      <Container>
+      <DarkNavBar variant="dark" bg="dark" expand="md">
       {/*<Navbar bg="dark" variant="dark" expand="md">*/}
       <StaticQuery
           query={query}
@@ -53,7 +54,7 @@ const NavigationBar = () => {
         </Navbar.Brand>
         <Nav>
             <Nav.Item as="li" className="title">
-              Stephen Canavan
+              STEPHEN CANAVAN
           </Nav.Item>
         </Nav>
         <Navbar.Toggle aria-controls="navBarResponsive" />
@@ -93,7 +94,7 @@ const NavigationBar = () => {
         />
       {/*</Navbar>*/}
       </DarkNavBar>
-    
+      </Container>
   );
 };
 

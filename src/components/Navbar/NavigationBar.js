@@ -44,13 +44,12 @@ const NavigationBar = () => {
   return (
       <DarkNavBar variant="dark" bg="dark">
       {/*<Navbar bg="dark" variant="dark" expand="md">*/}
-        <Navbar.Brand>
-        <StaticQuery
+      <StaticQuery
           query={query}
           render={data => (
-            <Img fixed={data.logoFixed.childImageSharp.fixed} className="logo" alt="logo"/>
-          )}
-        />
+        <>
+        <Navbar.Brand>
+            <Img fixed={data.logoFixed.childImageSharp.fixed} className="logo" alt="logo"/>     
         </Navbar.Brand>
         <Nav>
             <Nav.Item as="li" className="title">
@@ -73,38 +72,25 @@ const NavigationBar = () => {
           <Nav as="ul" className="ml-auto">
             <Nav.Item as="li" className="media">
               <Link to="/projects" className="nav-link" activeClassName="active">
-              <StaticQuery
-                query={query}
-                render={data => (
                   <Img fixed={data.gitLogo.childImageSharp.fixed} alt="logo"/>
-                )}
-              />
               </Link>
             </Nav.Item>
             <Nav.Item as="li" className="media">
               <Link to="/projects" className="nav-link" activeClassName="active">
-              <StaticQuery
-                query={query}
-                render={data => (
                   <Img fixed={data.linkedinLogo.childImageSharp.fixed} alt="logo"/>
-                )}
-              />
               </Link>
             </Nav.Item>
             <Nav.Item as="li" className="media">
               <Link to="/projects" className="nav-link" activeClassName="active">
-              <StaticQuery
-                query={query}
-                render={data => (
                   <Img fixed={data.emailLogo.childImageSharp.fixed} alt="logo"/>
-                )}
-              />
               </Link>
             </Nav.Item>
             </Nav>
           
         </Navbar.Collapse>
-
+        </>
+        )}
+        />
       {/*</Navbar>*/}
       </DarkNavBar>
     

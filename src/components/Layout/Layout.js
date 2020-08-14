@@ -12,6 +12,7 @@ import StyleProvider from "@components/StyleProvider/StyleProvider"
 import GlobalStyles from './components/GlobalStyles/GlobalStyles';
 import Head from "@components/Head/Head"
 import NavigationBar from "@components/Navbar/NavigationBar";
+import { Header, Footer, Main, Container } from './styles';
 
 const Layout = ({ title, children }) => {
 
@@ -19,9 +20,10 @@ const Layout = ({ title, children }) => {
     <StyleProvider>
       <Head title={title}/>
       <GlobalStyles/>
-      {/*<Header siteTitle="Stephen C"/>*/}
-      <NavigationBar/>
-      <main>{children}</main>
+      <Container>
+        <NavigationBar/>
+        <Main>{children}</Main>
+      </Container>
     </StyleProvider>
   )
 }

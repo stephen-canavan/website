@@ -14,12 +14,12 @@ const GlobalStyles = () => {
         body {
           margin: 0;
 
-          background-color: ${theme.colors.greyGreen[3]};
-          color: ${theme.colors.greyGreen[0]};
+          background-color: ${theme.colors.greyGreen[4]};
+          color: ${theme.colors.grey[0]};
 
           -webkit-font-smoothing: antialiased;
 
-          font-family: 'GT Walsheim Pro';
+          font-family: ${theme.fonts.main};
           font-weight: 300;
         }
 

@@ -8,18 +8,19 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Header from "@components/Header/Header"
 import StyleProvider from "@components/StyleProvider/StyleProvider"
+import GlobalStyles from './components/GlobalStyles/GlobalStyles';
 import Head from "@components/Head/Head"
-
-import { metaData } from "@data/data"
+import NavigationBar from "@components/Navbar/Navigationbar";
 
 const Layout = ({ title, children }) => {
 
   return (
     <StyleProvider>
-      <Head meta={metaData} title={title}/>
-      <Header siteTitle={metaData.title} />
+      <Head title={title}/>
+      <GlobalStyles/>
+      {/*<Header siteTitle="Stephen C"/>*/}
+      <NavigationBar/>
       <main>{children}</main>
     </StyleProvider>
   )

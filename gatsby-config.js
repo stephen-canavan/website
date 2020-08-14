@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `assets/images`,
+        name: `images`,
         path: `${__dirname}/src/assets/images`,
       },
     },
@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/logo.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/logo-planet.png`, // This path is relative to the root of the site.
       },
     },
 
@@ -37,6 +37,8 @@ module.exports = {
           "@scenes": "src/scenes",
           "@assets": "src/assets",
           "@data": "src/data",
+          "@fonts": "src/assets/fonts",
+          "@images": "src/assets/images",
         },
         extensions: [
           "js",

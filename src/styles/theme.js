@@ -7,9 +7,10 @@ const breakpoints = {
   const colors = {
     black: '#000000',
     white: '#FFFFFF',
-    sand: ['#FF8E7B', '#E4B659', '#FEF2E6', '#FCF8F5', '#F0E5D9', '#E5E5E5'],
-    grass: ['#2B3636', '#698F96'],
-    ground: ['#2B3636'],
+    yellow: ['#e3bc46'],
+    green: ['#779985', '#94d6ae'],
+    greyGreen: ['#496660', '#667a76', '#889e99', '#bbc7c4'],
+    grey: ['#343a40'],
   };
   
   const containers = {

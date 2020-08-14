@@ -11,7 +11,7 @@ import PropTypes from "prop-types"
 import StyleProvider from "@components/StyleProvider/StyleProvider"
 import GlobalStyles from './components/GlobalStyles/GlobalStyles';
 import Head from "@components/Head/Head"
-import NavigationBar from "@components/Navbar/Navigationbar";
+import NavigationBar from "@components/Navbar/NavigationBar";
 
 const Layout = ({ title, children }) => {
 

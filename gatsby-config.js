@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Stephen Canavan`,
+    title: `GraphQL Stephen Canavan`,
     description: `Stephen Canavan - Software Developer`,
     author: `Stephen Canavan`,
   },
@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -24,8 +24,26 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/logo.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/logo-planet.png`, // This path is relative to the root of the site.
       },
+    },
+
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@components": "src/components",
+          "@styles": "src/styles",
+          "@scenes": "src/scenes",
+          "@assets": "src/assets",
+          "@data": "src/data",
+          "@fonts": "src/assets/fonts",
+          "@images": "src/assets/images",
+        },
+        extensions: [
+          "js",
+        ]
+      }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

@@ -14,7 +14,7 @@ const breakpoints = {
   };
   
   const containers = {
-    small: `670px`,
+    small: `720px`,
     medium: `1010px`,
     large: `1530px`,
   };

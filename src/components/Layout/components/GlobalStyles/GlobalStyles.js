@@ -14,8 +14,9 @@ const GlobalStyles = () => {
         body {
           margin: 0;
 
-          background-color: ${theme.colors.greyGreen[4]};
-          color: ${theme.colors.grey[0]};
+          color: ${theme.colors.greyGreen[4]}
+          background: rgb(73,102,96);
+          background: radial-gradient(circle, rgba(73,102,96,1) 0%, rgba(52,58,64,1) 54%, rgba(23,24,24,1) 100%);
 
           -webkit-font-smoothing: antialiased;
 

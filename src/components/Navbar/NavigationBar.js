@@ -8,7 +8,7 @@ const query = graphql`
   {
     logoFixed: file(relativePath: {eq:"logo-planet.png"}) {
       childImageSharp {
-        fixed (width: 50) {
+        fixed (width: 45) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -42,59 +42,61 @@ const query = graphql`
 
 const NavigationBar = () => {
   return (
-      <Container>
+    <Container>
       <DarkNavBar variant="dark" bg="dark" expand="md">
-      {/*<Navbar bg="dark" variant="dark" expand="md">*/}
-      <StaticQuery
-          query={query}
-          render={data => (
-        <>
-        <Navbar.Brand>
-            <Img fixed={data.logoFixed.childImageSharp.fixed} className="logo" alt="logo"/>     
-        </Navbar.Brand>
-        <Nav>
-            <Nav.Item as="li" className="title">
-              STEPHEN CANAVAN
-          </Nav.Item>
-        </Nav>
-        <Navbar.Toggle aria-controls="navBarResponsive" />
-        <Navbar.Collapse id="navBarResponsive" >
-          <Nav as="ul" className="ml-auto page-links">
-            <PageLink as="li">
-              <Link to="/about" className="nav-link" activeClassName="active"> Home </Link>
-            </PageLink>
-            <PageLink as="li">
-              <Link to="/about" className="nav-link" activeClassName="active"> About </Link>
-            </PageLink>
-            <PageLink as="li">
-              <Link to="/projects" className="nav-link" activeClassName="active"> Projects </Link>
-            </PageLink>
-          </Nav>
-          <Nav as="ul" className="ml-auto">
-            <Nav.Item as="li" className="media">
-              <Link to="/projects" className="nav-link" activeClassName="active">
-                  <Img fixed={data.gitLogo.childImageSharp.fixed} alt="logo"/>
-              </Link>
-            </Nav.Item>
-            <Nav.Item as="li" className="media">
-              <Link to="/projects" className="nav-link" activeClassName="active">
-                  <Img fixed={data.linkedinLogo.childImageSharp.fixed} alt="logo"/>
-              </Link>
-            </Nav.Item>
-            <Nav.Item as="li" className="media">
-              <Link to="/projects" className="nav-link" activeClassName="active">
-                  <Img fixed={data.emailLogo.childImageSharp.fixed} alt="logo"/>
-              </Link>
-            </Nav.Item>
+        <StaticQuery
+            query={query}
+            render={data => (
+          <>
+            <Navbar.Brand>
+                <Img fixed={data.logoFixed.childImageSharp.fixed} className="logo" alt="logo"/>     
+            </Navbar.Brand>
+            
+            <Nav>
+              <Nav.Item as="li" className="title">
+                  STEPHEN CANAVAN
+              </Nav.Item>
             </Nav>
-          
-        </Navbar.Collapse>
-        </>
-        )}
+
+            <Navbar.Toggle aria-controls="navBarResponsive" />
+
+            <Navbar.Collapse id="navBarResponsive" >
+
+              <Nav as="ul" className="ml-auto page-links">
+                <PageLink as="li">
+                  <Link to="/" className="nav-link" activeClassName="active"> Home </Link>
+                </PageLink>
+                <PageLink as="li">
+                  <Link to="/about" className="nav-link" activeClassName="active"> About </Link>
+                </PageLink>
+                <PageLink as="li">
+                  <Link to="/projects" className="nav-link" activeClassName="active"> Projects </Link>
+                </PageLink>
+              </Nav>
+
+              <Nav as="ul" className="ml-auto">
+                <Nav.Item as="li" className="media">
+                  <Link to="/projects" className="nav-link" activeClassName="active">
+                      <Img fixed={data.gitLogo.childImageSharp.fixed} alt="logo"/>
+                  </Link>
+                </Nav.Item>
+                <Nav.Item as="li" className="media">
+                  <Link to="/projects" className="nav-link" activeClassName="active">
+                      <Img fixed={data.linkedinLogo.childImageSharp.fixed} alt="logo"/>
+                  </Link>
+                </Nav.Item>
+                <Nav.Item as="li" className="media">
+                  <Link to="/projects" className="nav-link" activeClassName="active">
+                      <Img fixed={data.emailLogo.childImageSharp.fixed} alt="logo"/>
+                  </Link>
+                </Nav.Item>
+              </Nav>
+            
+            </Navbar.Collapse>
+          </>)}
         />
-      {/*</Navbar>*/}
       </DarkNavBar>
-      </Container>
+    </Container>
   );
 };
 

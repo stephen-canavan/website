@@ -18,7 +18,7 @@ const query = graphql`
 
     logoPlanet: file(relativePath: {eq:"logo-planet.png"}) {
         childImageSharp {
-          fixed (width: 210) {
+          fixed (width: 200) {
             ...GatsbyImageSharpFixed
           }
         }

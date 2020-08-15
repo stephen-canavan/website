@@ -29,7 +29,8 @@ const TextHeading = styled.div`
 const MainText = styled.div`
   color: ${theme.colors.greyGreen[4]};
   margin: 20px;
-  font-size: 20px;
+  font-size: 22px;
+  font-family: 'Gill Sans';
 `;
 
 const TextBox = styled.div`

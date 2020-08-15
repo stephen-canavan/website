@@ -6,7 +6,6 @@ import { graphql } from 'gatsby';
 import Layout from '@components/Layout/Layout'
 import HomeBanner from '@components/HomeBanner/HomeBanner'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MediaLinks from "@components/MediaLinks/MediaLinks";
 
 const IndexPage = ({data}) => (
   <Layout title="Software Developer">

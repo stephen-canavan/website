@@ -9,12 +9,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const IndexPage = ({data}) => (
   <Layout title="Software Developer">
-    <Container>
       <HomeBanner>
         <h1>STEPHEN CANAVAN</h1>
       </HomeBanner>
-      
-    </Container>
   </Layout>
 );
 

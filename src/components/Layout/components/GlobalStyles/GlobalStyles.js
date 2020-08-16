@@ -28,6 +28,10 @@ const GlobalStyles = () => {
           color: inherit;
           text-decoration: none;
         }
+
+        .dropdown-menu{
+          background-color: ${theme.colors.grey[0]};
+        }
       `}
     />
   );

@@ -20,10 +20,8 @@ const Layout = ({ title, children }) => {
     <StyleProvider>
       <Head title={title}/>
       <GlobalStyles/>
-      <Container>
         <NavigationBar/>
         <Main>{children}</Main>
-      </Container>
     </StyleProvider>
   )
 }

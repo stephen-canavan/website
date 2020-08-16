@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { Navbar, NavItem } from 'react-bootstrap'
-
+import { Nav, Navbar, NavItem } from 'react-bootstrap'
+import { theme } from '@styles'
 
 const DarkNavBar = styled(Navbar)`
     bg: dark;
@@ -12,11 +12,21 @@ const DarkNavBar = styled(Navbar)`
     width: 100%;
     box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
     max-height: 70px;
+    background-color: ${theme.colors.grey[0]};
 `;
 
 const Container = styled.div`
-    width: 100%;
     white-space: nowrap;
+    background-color: ${theme.colors.grey[0]};
+    padding: 0px;
+`;
+
+const NavCollapse = styled(Navbar.Collapse)`
+    width: 100%;
+    background-color: ${theme.colors.grey[0]};
+    text-align: center;
+    z-index: 9999;
+    padding: 0px;
 `;
 
 const PageLink = styled(NavItem)`
@@ -26,4 +36,14 @@ const PageLink = styled(NavItem)`
     font-size: 16px;
 `;
 
-export {DarkNavBar, PageLink, Container};
+const MediaIcon = styled(NavItem)`
+    text-align: center;
+    margin: auto;
+`;
+
+const NavIcons = styled(Nav)`
+    align-items: right;
+    text-align: right;
+`;
+
+export {DarkNavBar, PageLink, Container, NavCollapse, MediaIcon, NavIcons};

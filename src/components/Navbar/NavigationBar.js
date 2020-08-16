@@ -2,7 +2,7 @@ import React from "react"
 import { Navbar, Nav } from 'react-bootstrap'
 import { graphql, StaticQuery, Link } from 'gatsby';
 import  Img  from 'gatsby-image';
-import { DarkNavBar, PageLink, Container } from './styles';
+import { DarkNavBar, PageLink, NavCollapse, MediaIcon, NavIcons } from './styles';
 
 const query = graphql`
   {
@@ -42,8 +42,7 @@ const query = graphql`
 
 const NavigationBar = () => {
   return (
-    <Container>
-      <DarkNavBar variant="dark" bg="dark" expand="md">
+      <DarkNavBar variant="dark" bg="dark" expand="lg">
         <StaticQuery
             query={query}
             render={data => (
@@ -60,7 +59,7 @@ const NavigationBar = () => {
 
             <Navbar.Toggle aria-controls="navBarResponsive" />
 
-            <Navbar.Collapse id="navBarResponsive" >
+            <NavCollapse id="navBarResponsive" >
 
               <Nav as="ul" className="ml-auto page-links">
                 <PageLink as="li">
@@ -74,29 +73,28 @@ const NavigationBar = () => {
                 </PageLink>
               </Nav>
 
-              <Nav as="ul" className="ml-auto">
-                <Nav.Item as="li" className="media">
+              <NavIcons as="ul" className="ml-auto">
+                <MediaIcon as="li" className="media">
                   <Link to="/projects" className="nav-link" activeClassName="active">
                       <Img fixed={data.gitLogo.childImageSharp.fixed} alt="logo"/>
                   </Link>
-                </Nav.Item>
-                <Nav.Item as="li" className="media">
+                </MediaIcon>
+                <MediaIcon as="li" className="media">
                   <Link to="/projects" className="nav-link" activeClassName="active">
                       <Img fixed={data.linkedinLogo.childImageSharp.fixed} alt="logo"/>
                   </Link>
-                </Nav.Item>
-                <Nav.Item as="li" className="media">
+                </MediaIcon>
+                <MediaIcon as="li" className="media">
                   <Link to="/projects" className="nav-link" activeClassName="active">
                       <Img fixed={data.emailLogo.childImageSharp.fixed} alt="logo"/>
                   </Link>
-                </Nav.Item>
-              </Nav>
+                </MediaIcon>
+              </NavIcons>
             
-            </Navbar.Collapse>
+            </NavCollapse>
           </>)}
         />
       </DarkNavBar>
-    </Container>
   );
 };
 

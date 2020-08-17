@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 
-import { Wrapper, TextHeading, MainText } from './styles';
+import { Wrapper, TextHeading, MainText, SubHeading } from './styles';
 import { StaticQuery, graphql } from "gatsby";
 import Img from 'gatsby-image'
 
@@ -18,7 +18,7 @@ const query = graphql`
 
     logoPlanet: file(relativePath: {eq:"logo-planet.png"}) {
         childImageSharp {
-          fixed (width: 200) {
+          fixed (width: 160) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -36,14 +36,15 @@ const HomeBanner = ({ children }) => {
                 <Img fixed={data.logoPlanet.childImageSharp.fixed} className="logo" alt="logo"/>
             )}
         />
-        <TextHeading>{children}</TextHeading>
-        <MainText>Duis lacinia nec turpis ac pretium. Nulla fringilla ultrices nulla sit amet luctus. Suspendisse blandit tincidunt sapien eget tristique. Sed nec tempor nibh. Sed pulvinar id quam eget dignissim. Sed diam lacus, tempor sed efficitur quis, aliquet nec nulla</MainText>
+        <TextHeading>STEPHEN CANAVAN</TextHeading>
+        <SubHeading>Software Developer</SubHeading>
+        <MainText>My name is Stephen, I am a software developer from Dublin. The purpose of this site is to provide an outlet for me to showcase and discuss some of my work and personal projects </MainText>
     </Wrapper>
   )
 }
 
 HomeBanner.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   title: PropTypes.string,
 }
 

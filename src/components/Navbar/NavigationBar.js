@@ -4,6 +4,8 @@ import { graphql, StaticQuery, Link } from 'gatsby';
 import  Img  from 'gatsby-image';
 import { DarkNavBar, PageLink, NavCollapse, MediaIcon, NavIcons } from './styles';
 
+import { externalLinks } from '@data'
+
 const query = graphql`
   {
     logoFixed: file(relativePath: {eq:"logo-planet.png"}) {
@@ -66,26 +68,26 @@ const NavigationBar = () => {
                   <Link to="/" className="nav-link" activeClassName="active"> Home </Link>
                 </PageLink>
                 <PageLink as="li">
-                  <Link to="/about" className="nav-link" activeClassName="active"> About </Link>
+                  <Link to="/404" className="nav-link" activeClassName="active"> About </Link>
                 </PageLink>
                 <PageLink as="li">
-                  <Link to="/projects" className="nav-link" activeClassName="active"> Projects </Link>
+                  <Link to="/404" className="nav-link" activeClassName="active"> Projects </Link>
                 </PageLink>
               </Nav>
 
               <NavIcons as="ul" className="ml-auto">
                 <MediaIcon as="li" className="media">
-                  <Link to="/projects" className="nav-link" activeClassName="active">
+                  <Link to="https://github.com/stephen-canavan/" target="_blank" className="nav-link" activeClassName="active">
                       <Img fixed={data.gitLogo.childImageSharp.fixed} alt="logo"/>
                   </Link>
                 </MediaIcon>
                 <MediaIcon as="li" className="media">
-                  <Link to="/projects" className="nav-link" activeClassName="active">
+                  <Link to="https://linkedin.com/in/stephen-canavan/" target="_blank" className="nav-link" activeClassName="active">
                       <Img fixed={data.linkedinLogo.childImageSharp.fixed} alt="logo"/>
                   </Link>
                 </MediaIcon>
                 <MediaIcon as="li" className="media">
-                  <Link to="/projects" className="nav-link" activeClassName="active">
+                  <Link to="/404" className="nav-link" activeClassName="active">
                       <Img fixed={data.emailLogo.childImageSharp.fixed} alt="logo"/>
                   </Link>
                 </MediaIcon>

@@ -29,6 +29,10 @@ const GlobalStyles = () => {
           text-decoration: none;
         }
 
+        .rapper {
+          padding: 50px;
+        }
+
         .dropdown-menu{
           background-color: ${theme.colors.grey[0]};
         }

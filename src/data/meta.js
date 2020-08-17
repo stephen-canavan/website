@@ -5,4 +5,9 @@ const meta = {
     charSet: 'utf-8'
 }
 
-export default { meta };
+const externalLinks = {
+    github: "https://github.com/stephen-canavan/",
+    linkedIn: "https://www.linkedin.com/in/stephen-canavan/",
+}
+
+export default { meta, externalLinks };

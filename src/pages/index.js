@@ -5,13 +5,13 @@ import { graphql } from 'gatsby';
 
 import Layout from '@components/Layout/Layout'
 import HomeBanner from '@components/HomeBanner/HomeBanner'
+import BorderedBanner from '@components/BorderedBanner/BorderedBanner'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const IndexPage = ({data}) => (
   <Layout title="Software Developer">
-      <HomeBanner>
-        <h1>STEPHEN CANAVAN</h1>
-      </HomeBanner>
+      <HomeBanner/>
+      <BorderedBanner/>
   </Layout>
 );
 
@@ -39,7 +39,7 @@ export const query = graphql`
 
     logoPlanet: file(relativePath: {eq:"logo-planet.png"}) {
       childImageSharp {
-        fixed (width: 150) {
+        fixed (width: 250) {
           ...GatsbyImageSharpFixed
         }
       }

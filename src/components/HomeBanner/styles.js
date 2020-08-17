@@ -21,14 +21,22 @@ const Wrapper = styled.div`
   }
 `;
 
-const TextHeading = styled.div`
+const TextHeading = styled.h1`
   color: ${theme.colors.greyGreen[4]};
-  margin: 60px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+`;
+
+const SubHeading = styled.h3`
+  color: ${theme.colors.greyGreen[4]};
+  margin-top: 10px;
+  margin-bottom: 10px;
 `;
 
 const MainText = styled.div`
   color: ${theme.colors.greyGreen[4]};
-  margin: 20px;
+  margin: 40px;
+  margin-bottom: 10px;
   font-size: 22px;
   font-family: 'Gill Sans';
 `;
@@ -82,6 +90,7 @@ export {
   Container,
   Wrapper,
   TextHeading,
+  SubHeading,
   MainText,
   TextBox,
   ButtonBox,

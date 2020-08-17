@@ -7,10 +7,11 @@ const breakpoints = {
   const colors = {
     black: '#000000',
     white: '#FFFFFF',
-    yellow: ['#e3bc46'],
+    yellow: ['#e3bc46', '#ffd969', '#ffe18a'],
     green: ['#779985', '#94d6ae'],
     greyGreen: ['#496660', '#667a76', '#889e99', '#bbc7c4', '#e6f0ed'],
     grey: ['#343a40'],
+    blue: ['#94d3d6', '#c7fafc'],
   };
   
   const containers = {

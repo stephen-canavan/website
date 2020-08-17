@@ -29,6 +29,14 @@ const GlobalStyles = () => {
           text-decoration: none;
         }
 
+        .rapper {
+          padding: 50px;
+          background: rgb(255,255,255);
+          background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(230,230,230,1) 100%);
+          min-height: 1000px;
+          
+        }
+
         .dropdown-menu{
           background-color: ${theme.colors.grey[0]};
         }

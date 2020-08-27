@@ -12,7 +12,7 @@ import StyleProvider from "@components/StyleProvider/StyleProvider"
 import GlobalStyles from './components/GlobalStyles/GlobalStyles';
 import Head from "@components/Head/Head"
 import NavigationBar from "@components/Navbar/NavigationBar";
-import { Main, Container } from './styles';
+import { Main } from './styles';
 
 const Layout = ({ title, children }) => {
 

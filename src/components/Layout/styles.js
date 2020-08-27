@@ -4,7 +4,9 @@ const Header = styled.header``;
 
 const Footer = styled.footer``;
 
-const Main = styled.main``;
+const Main = styled.main`
+  height: 100%;
+`;
 
 const Container = styled.div`
   position: relative;

@@ -22,6 +22,7 @@ const GlobalStyles = () => {
 
           font-family: ${theme.fonts.main};
           font-weight: 300;
+          height: 100%;
         }
 
         a {
@@ -30,7 +31,7 @@ const GlobalStyles = () => {
         }
 
         .rapper {
-          padding: 50px;
+          padding-top: 30px;
           background: rgb(255,255,255);
           background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(230,230,230,1) 100%);
           min-height: 1000px;

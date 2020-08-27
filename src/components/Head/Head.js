@@ -6,7 +6,6 @@ import { meta } from "@data"
 
 const Head = ({ title }) => {
   const titleTemp = "%s | " + title;
-  const url = "https://www.stephen-canavan.com"
   return (
     <Helmet titleTemplate={titleTemp} >
       <title>Stephen Canavan</title>

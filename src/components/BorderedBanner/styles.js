@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { theme } from '@styles'
-import { ListGroup } from 'react-bootstrap'
 
 const Container = styled.div`
   display: flex;
@@ -16,11 +15,14 @@ const Border= styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px;
+  margin: 20px;
   margin-top: 10px;
   max-width: ${({ theme }) => theme.containers.medium};
-  border-style: solid;
-  border-radius: 50px;
+  border-radius: 20px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.dt}) {
+    border-radius: 50px;
+  }
 
 `;
 
@@ -28,12 +30,11 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 40px 80px 80px;
+  padding: 25px 25px;
   max-width: ${({ theme }) => theme.containers.small};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.dt}) {
-    padding-top: 40px;
-    padding-bottom: 80px;
+    padding: 40px 60px;
     min-height: 80px;
   }
 `;

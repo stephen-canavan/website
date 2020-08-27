@@ -4,7 +4,7 @@ import Layout from "@components/Layout/Layout"
 import BorderedBanner from "@components/BorderedBanner/BorderedBanner"
 
 const NotFoundPage = () => (
-  <Layout title="404 - Not Found">
+  <Layout title="Under Construction">
     <div className="rapper">
       <BorderedBanner/>
     </div>

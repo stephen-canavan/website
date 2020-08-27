@@ -4,8 +4,6 @@ import { graphql, StaticQuery, Link } from 'gatsby';
 import  Img  from 'gatsby-image';
 import { DarkNavBar, PageLink, NavCollapse, MediaIcon, NavIcons } from './styles';
 
-import { externalLinks } from '@data'
-
 const query = graphql`
   {
     logoFixed: file(relativePath: {eq:"logo-planet.png"}) {

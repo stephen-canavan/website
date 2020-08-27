@@ -17,6 +17,7 @@ const Border= styled.div`
   align-items: center;
   margin: 20px;
   margin-top: 10px;
+  margin-bottom: 150px;
   max-width: ${({ theme }) => theme.containers.medium};
   border-radius: 20px;
 
